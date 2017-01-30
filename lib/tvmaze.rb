@@ -9,18 +9,7 @@ module TVMaze
 
   def self.request(path, params = {})
     url = @@api_base + path
-    res = RestClient.get(url, params: params) do |response, request, result, &block|
-      case response.code
-      when 200
-        response.return!(request, result, &block)
-      when 401
-        fail TVMaze::Unauthorized
-      when 403
-        fail TVMaze::Forbidden
-      when 404
-        fail TVMaze::NotFound
-      end
-    end
+    res = RestClient.get(url, params: params)
     JSON.parse(res)
   end
 end
