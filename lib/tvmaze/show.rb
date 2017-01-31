@@ -36,6 +36,11 @@ module TVMaze
       end
     end
 
+    def self.lookup(params = {})
+      result = TVMaze.request('/lookup/shows', params)
+      Show.new(result)
+    end
+
     def self.search(query = '', params = {})
       params[:q] = query.to_s.strip
       result = TVMaze.request('/search/shows', params)
