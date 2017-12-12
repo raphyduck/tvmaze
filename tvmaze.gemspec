@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'tvmaze'
-  s.version     = '0.1.2'
+  s.version     = '0.1.3'
   s.date        = '2015-11-09'
   s.summary     = 'TVmaze API wrapper.'
   s.description = 'tvmaze is a small wrapper around TVmaze API (http://api.tvmaze.com/).'

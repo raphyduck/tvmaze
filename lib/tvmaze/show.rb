@@ -1,6 +1,6 @@
 module TVMaze
   class Show
-    SHOW_MAPPING = { id: :id, url: :url, name: :name, type: :type,
+    SHOW_MAPPING = { id: :id, externals: :ids, url: :url, name: :name, type: :type,
                      language: :language, genres: :genres, status: :status,
                      runtime: :runtime, premiered: :premiered,
                      schedule: :schedule, rating: :rating, weight: :weight,
